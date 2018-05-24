@@ -1,8 +1,9 @@
 import React from 'react';
 import './index.css';
 
+
 const SeriesListItems = ({series}) => (
-	<li key={series.show.id}>
+	<li>
 		{series.show.name}
 	</li>
 );
@@ -11,7 +12,7 @@ const SeriesList = (props) => {
 		<div>
 			<ul className="series_list">
 			{props.list.map(series=>(
-					<SeriesListItems series={series} />
+					<SeriesListItems series={series} key={series.show.id}/>
 				)
 			)}
 			</ul>
