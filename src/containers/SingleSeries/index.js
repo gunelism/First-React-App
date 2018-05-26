@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Lodaer from '../../components/Loader';
 import axios from 'axios';
 import Loader from '../../components/Loader';
 
@@ -28,7 +27,7 @@ class SingleSeries extends Component {
                         <p>Rating - {show.rating.average}</p>
                         <p>Episodes - {show._embedded.episodes.length}</p>
                         <p>
-                            <img src={show.image.medium} />
+                            <img alt={show.name} src={show.image.medium} />
                         </p>
                     </div>
                 }
